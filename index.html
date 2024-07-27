@@ -708,18 +708,18 @@
         </div>
         <div class="modal-body">
           <p>I'm thrilled that you've said yes, Ayushi! Let's make it official:</p>
-          <form id="dateForm">
+          <form id="dateForm" action="https://formspree.io/f/xyyqoqan" method="post">
             <div class="mb-3">
               <label for="date" class="form-label"><i class="fas fa-calendar-alt"></i> When are you free?</label>
-              <input type="date" class="form-control" id="date" required>
+              <input type="date" class="form-control" id="date" name="date" required>
             </div>
             <div class="mb-3">
               <label for="time" class="form-label"><i class="fas fa-clock"></i> What time works best for you?</label>
-              <input type="time" class="form-control" id="time" required>
+              <input type="time" class="form-control" id="time" name="time" required>
             </div>
             <div class="mb-3">
               <label for="message" class="form-label"><i class="fas fa-comment"></i> Any special requests or things I should know?</label>
-              <textarea class="form-control" id="message" rows="3"></textarea>
+              <textarea class="form-control" id="message" name="message" rows="3"></textarea>
             </div>
             <button type="submit" class="btn btn-custom btn-lg w-100">Let's Make It Happen! <i class="fas fa-paper-plane"></i></button>
           </form>
@@ -731,7 +731,7 @@
   <canvas id="confetti"></canvas>
 
   <div class="music-notes"></div>
-  
+  <script src="//code.tidio.co/vxbmfcvr3ccycxnmfbgnxoavulrg9ucl.js" async></script>
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.5.1/dist/confetti.browser.min.js"></script>
   <script>
@@ -800,46 +800,46 @@ button.addEventListener('mouseover', () => {
     });
   }
   
-  document.getElementById('dateForm').addEventListener('submit', function(e) {
-    e.preventDefault();
-    const date = document.getElementById('date').value;
-    const time = document.getElementById('time').value;
-    const message = document.getElementById('message').value;
+  // document.getElementById('dateForm').addEventListener('submit', function(e) {
+  //   e.preventDefault();
+  //   const date = document.getElementById('date').value;
+  //   const time = document.getElementById('time').value;
+  //   const message = document.getElementById('message').value;
     
-    let responseMessage = `I'm so excited for our date on ${date} at ${time}, Ayushi!`;
-    if (message) {
-      responseMessage += ` And thank you for letting me know: "${message}". I'll keep that in mind.`;
-    }
-    responseMessage += " I can't wait to see you and hear you play!";
+  //   let responseMessage = `I'm so excited for our date on ${date} at ${time}, Ayushi!`;
+  //   if (message) {
+  //     responseMessage += ` And thank you for letting me know: "${message}". I'll keep that in mind.`;
+  //   }
+  //   responseMessage += " I can't wait to see you and hear you play!";
   
-    alert(responseMessage);
-    bootstrap.Modal.getInstance(document.getElementById('dateModal')).hide();
+  //   alert(responseMessage);
+  //   bootstrap.Modal.getInstance(document.getElementById('dateModal')).hide();
     
-    // Trigger a bigger confetti celebration
-    var end = Date.now() + (5 * 1000);
-    var colors = ['#E6E6FA', '#9370DB', '#8A2BE2'];
+  //   // Trigger a bigger confetti celebration
+  //   var end = Date.now() + (5 * 1000);
+  //   var colors = ['#E6E6FA', '#9370DB', '#8A2BE2'];
   
-    (function frame() {
-      confetti({
-        particleCount: 2,
-        angle: 60,
-        spread: 55,
-        origin: { x: 0 },
-        colors: colors
-      });
-      confetti({
-        particleCount: 2,
-        angle: 120,
-        spread: 55,
-        origin: { x: 1 },
-        colors: colors
-      });
+  //   (function frame() {
+  //     confetti({
+  //       particleCount: 2,
+  //       angle: 60,
+  //       spread: 55,
+  //       origin: { x: 0 },
+  //       colors: colors
+  //     });
+  //     confetti({
+  //       particleCount: 2,
+  //       angle: 120,
+  //       spread: 55,
+  //       origin: { x: 1 },
+  //       colors: colors
+  //     });
   
-      if (Date.now() < end) {
-        requestAnimationFrame(frame);
-      }
-    }());
-  });
+  //     if (Date.now() < end) {
+  //       requestAnimationFrame(frame);
+  //     }
+  //   }());
+  // });
   
   // Smooth scrolling for navigation links
   document.querySelectorAll('a[href^="#"]').forEach(anchor => {
